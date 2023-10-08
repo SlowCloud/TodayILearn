@@ -48,6 +48,6 @@ Vim이 강력하다고 불리는 이유는 단축키와 매크로, 정규표현�
   - [요약 정리글](https://devfon.tistory.com/64)
 - [vimhelp](https://vimhelp.org/)
 - [neovim documentation](https://neovim.io/doc/user/)
-  - 개인적으로 이쪽을 추천한다.   
-  Vim을 리팩터링하는 프로젝트이고, 가장 많이 쓰이고 있다.   
-  [Vim 리포지토리](https://github.com/vim/vim)보다 [큰 인기를 끌고 있다.](https://github.com/neovim/neovim)
+  - 개인적으로 이쪽을 추천합니다.   
+  Vim을 리팩터링하는 프로젝트이고, 가장 많이 쓰이고 있습니다.   
+  [Vim 리포지토리](https://github.com/vim/vim)보다 [큰 인기를 끌고 있습니다.](https://github.com/neovim/neovim)
