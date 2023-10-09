@@ -44,6 +44,8 @@ Vim이 강력하다고 불리는 이유는 단축키와 매크로, 정규표현�
 ## 그래서 어떻게 시작하죠?
 
 - [vimtutor](https://github.com/vim/vim/blob/master/runtime/tutor/tutor.ko.utf-8)
+  - [vimtutor 오버뷰](https://wormwlrm.github.io/2023/04/16/Learn-Vim-with-Vimtutor.html)
+- [vim cheatsheet](https://vim.rtorr.com/lang/ko)
 - [vimhelp](https://vimhelp.org/)
 - [neovim documentation](https://neovim.io/doc/user/)
   - 개인적으로 이쪽을 추천합니다.   
