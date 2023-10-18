@@ -27,7 +27,7 @@ Vim을 제대로 활용하기 위해 알아야 하는 선행지식이 많습니�
 ### 편집기 바깥 기능과의 충돌
 
 클립보드가 좋은 예가 될 것 같습니다. 시스템 클립보드에 있는 내용을 Vim에 붙여넣기하거나, Vim 내의 클립보드의 내용을 시스템 클립보드로 옮기는 과정이 굉장히 뻣뻣합니다.   
-근래에는 [해당 부분을 해결할 수 있는 옵션](https://blog.naver.com/nfwscho/220390257384)이 생겼지만, 복사 붙여넣기는 마우스를 쓰는 편이 훨 빠르죠. 
+근래에는 [해당 부분을 해결할 수 있는 옵션](https://blog.naver.com/nfwscho/220390257384)이 생겼지만, 여러 줄 복사 붙여넣기는 마우스를 쓰는 편이 훨 빠르죠. 
 
 ### Vim 편집기 자체로는 한없이 모자란 생산성
 
@@ -47,6 +47,12 @@ Vim이 강력하다고 불리는 이유는 단축키와 매크로, 정규표현�
   - [vimtutor 오버뷰](https://wormwlrm.github.io/2023/04/16/Learn-Vim-with-Vimtutor.html)
 - [vim cheatsheet](https://vim.rtorr.com/lang/ko)
 - [vimhelp](https://vimhelp.org/)
+- [important vim options](https://linuxhint.com/important_vim_settings/)
+- [vim.html](https://www.phys.hawaii.edu/~mza/PC/vim.html)
+
+## 관련 링크
+
+- [Vim 도대체 왜 쓰는가](https://bengi.kr/1349)
 - [neovim documentation](https://neovim.io/doc/user/)
   - 개인적으로 이쪽을 추천합니다.   
   Vim을 리팩터링하는 프로젝트이고, 가장 많이 쓰이고 있습니다.   
