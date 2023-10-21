@@ -40,6 +40,10 @@ ZQ에 잘못 익숙해지면 기껏 열심히 작성한 것들을 저장하지 �
 
 레지스터에 저장된 문자열을 붙여넣는다. @{레지스터}를 해도 된다.
 
+- "+
+
+시스템 클립보드와 연결되는 레지스터. 해당 레지스터에 문자열을 저장하면 Vim 외부에서도 복사한 내용을 사용할 수 있다.
+
 # 편의성
 
 ## 숫자 조절
@@ -59,12 +63,15 @@ ZQ에 잘못 익숙해지면 기껏 열심히 작성한 것들을 저장하지 �
 
 # 옵션
 
-## number - nu
+### number | nu
 줄 번호 표시
 
-## relativenumber - rnu
+### relativenumber | rnu
 상대적 줄 번호 표시
 
+### clipboard=unnamedplus
+Vim의 기본 클립보드를 시스템 클립보드로 설정  
+[unnamed와 unnamedplus의 차이](https://stackoverflow.com/questions/30691466/what-is-difference-between-vims-clipboard-unnamed-and-unnamedplus-settings)
 
 # 매크로
 
