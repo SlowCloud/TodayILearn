@@ -49,7 +49,7 @@ L       : 문서의 끝으로 이동
 
 ### 빈 줄로 이동하기
 ```
-{       : 아래로 이동
+{       : 위로 이동
 }       : 아래로 이동
 ```
 
@@ -78,7 +78,7 @@ z=          : 커서가 위치한 곳의 단어와 유사한 단어 추천, 선�
 
 ## 옵션
 ```
-set number          : 줄 번호 표시. 끄려면 set nonu
+set number          : 줄 번호 표시. 끄려면 set nonumber
 set nu              : 줄 번호 표시. 끄려면 set nonu
 
 set relativenumber  : 상대적 줄 번호 표시. 끄러면 set norelativenumber
@@ -110,7 +110,7 @@ qa      : 레지스터 a에 매크로를 녹화한다. 작업 후 q를 누르면
 @@      : 마지막으로 수행한 매크로를 반복한다.
 
 
-qaA;<esc>jq9@@
+qaA;<esc>jq9@a
 위 입력을 따라하면 10줄의 끝에 세미콜론을 작성할 수 있다.
 
 a1<esc>qayyp<ctrl+a>q98@a  
