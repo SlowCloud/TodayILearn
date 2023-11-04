@@ -45,5 +45,18 @@ Vim 버전 말고 그냥 [fzf](https://github.com/junegunn/fzf)도 추천드립�
 ### [lightline](https://github.com/itchyny/lightline.vim)
 Vim의 statusline/tabline을 이쁘게 꾸며주는 플러그인.
 
+### [vim-surround](https://github.com/tpope/vim-surround)
+중괄호, 따옴표, html 태그 등등 단어/문장을 감싸는 내용 작성을 도와주는 플러그인.
+
 ### [emmet-vim](https://github.com/mattn/emmet-vim)
 html 작성에 크게 도움을 주는 플러그인
+
+### [vim-easymotion](https://github.com/easymotion/vim-easymotion)
+커서 이동에 편의성을 추가해주는 플러그인
+
+### [vim-startify](https://github.com/mhinz/vim-startify)
+Vim Start Screen을 추가해주는 플러그인
+
+### [vimwiki](https://github.com/vimwiki/vimwiki)
+Vim으로 빠르고 간편하게 로컬 위키를 만들 수 있게 해주는 플러그인  
+[해당 링크](https://johngrib.github.io/wiki/my-wiki/)를 참고하시면 정적 웹 위키를 만들 수도 있어요!

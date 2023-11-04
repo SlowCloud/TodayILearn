@@ -50,6 +50,8 @@ VSCode는 GUI 환경에서 작동하고, Vim은 CLI 환경에서 작동합니다
 
 ## 관련 링크
 
+- [Vim, 두 가지 관점](https://johngrib.github.io/wiki/two-views-of-vim/)
+  - Vim에 관심을 가지게 해 줄 좋은 글.
 - [Vim 도대체 왜 쓰는가](https://bengi.kr/1349)
 - [neovim documentation](https://neovim.io/doc/user/)
   - 개인적으로 이쪽을 추천합니다.   
