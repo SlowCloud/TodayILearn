@@ -52,7 +52,6 @@
   - [내부 클래스의 장단점](https://inpa.tistory.com/entry/JAVA-%E2%98%95-%EB%82%B4%EB%B6%80-%ED%81%B4%EB%9E%98%EC%8A%A4Inner-Class-%EC%9E%A5%EC%A0%90-%EC%A2%85%EB%A5%98#1._%ED%81%B4%EB%9E%98%EC%8A%A4%EB%A5%BC_%EB%85%BC%EB%A6%AC%EC%A0%81%EC%9C%BC%EB%A1%9C_%EA%B7%B8%EB%A3%B9%ED%99%94)
   - [nested class와 inner class의 차이](https://tworab.tistory.com/49)
   - inner/nested class는 outer class의 요소들을 직접 참조할 수 있다. 이를 적극적으로 활용할 수 있다면 내부 클래스를 만드는 게 좋다!
----
 
 ## 결론을 내리지 못한 것들
 
