@@ -6,6 +6,8 @@
 - [리팩터링 구루 - 리팩터링 관련 정보 사이트](https://refactoring.guru/ko/design-patterns/catalog)
 - [patterns-dev.github.io - 디자인 패턴 모음](https://patterns-dev-kr.github.io/)
 - 우아한 객체지향
+  - [유튜브 자료](https://www.youtube.com/watch?v=dJ5C4qRqAgA)
+  - [슬라이드 자료](https://www.slideshare.net/baejjae93/ss-151545329)
   - [우아한 객체지향 1단계 - 객체 참조](https://github.com/eternity-oop/Woowahan-OO-01-object-reference)
   - [우아한 객체지향 2단계 - 도메인 서비스](https://github.com/eternity-oop/Woowahan-OO-02-domain-service)
   - [우아한 객체지향 3단계 - 도메인 이벤트](https://github.com/eternity-oop/Woowahan-OO-03-domain-event)
