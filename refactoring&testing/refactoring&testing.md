@@ -27,6 +27,8 @@
   - [디미터 원칙](https://dkswnkk.tistory.com/687)
 - [private constructor는 언제 쓰는 것이 좋은가?](https://stackoverflow.com/questions/2062560/what-is-the-use-of-making-constructor-private-in-a-class)
 - [테스트가 어려운 객체는 잘못 설계된 객체인가?](https://jojoldu.tistory.com/687)
+  - 테스트가 쉬운 객체는 어떤 객체인가?
+  - 테스트가 쉬운 객체를 짜는 방법은?
 - [equals와 hashcode는 같이 재정의해야 한다](https://tecoble.techcourse.co.kr/post/2020-07-29-equals-and-hashCode/)
 - [일급 컬렉션을 쓰는 이유](https://tecoble.techcourse.co.kr/post/2020-05-08-First-Class-Collection/)
 - 정적 팩토리는 언제, 왜 써야 하는가?
@@ -51,17 +53,18 @@
   - [내부 클래스는 어떨 때 쓰는 걸까?](https://stackoverflow.com/questions/18396016/when-to-use-inner-classes-in-java-for-helper-classes)
   - [내부 클래스의 장단점](https://inpa.tistory.com/entry/JAVA-%E2%98%95-%EB%82%B4%EB%B6%80-%ED%81%B4%EB%9E%98%EC%8A%A4Inner-Class-%EC%9E%A5%EC%A0%90-%EC%A2%85%EB%A5%98#1._%ED%81%B4%EB%9E%98%EC%8A%A4%EB%A5%BC_%EB%85%BC%EB%A6%AC%EC%A0%81%EC%9C%BC%EB%A1%9C_%EA%B7%B8%EB%A3%B9%ED%99%94)
   - [nested class와 inner class의 차이](https://tworab.tistory.com/49)
-  - inner/nested class는 outer class의 요소들을 직접 참조할 수 있다. 이를 적극적으로 활용할 수 있다면 내부 클래스를 만드는 게 좋다!
+  - inner class는 outer class의 요소들을 직접 참조할 수 있다. 이를 적극적으로 활용할 수 있다면 내부 클래스를 만드는 게 좋다!
 
 ## 결론을 내리지 못한 것들
 
 - 내부 클래스를 쓰는 것은 나쁜가?
   - 외부에서 사용되어야 하지만, 특정 클래스의 내부 요소들에 대해 깊이 관여하는 경우(많은 value들을 요구, 값을 자주 참조, 또는 특정 클래스에 한정적인 데이터를 보유하는 경우?) nested class를 사용한다?
-  - inner/nested class는 outer class의 요소들을 직접 참조할 수 있다. 이를 적극적으로 활용할 수 있다면 내부 클래스를 만드는 게 좋다!
+  - inner class는 outer class의 요소들을 직접 참조할 수 있다. 이를 적극적으로 활용할 수 있다면 내부 클래스를 만드는 게 좋다!
     - --> 너무 적게 쓰이는 getter들을 만들지 않아도 된다!!
     - 그러면 DTO도 inner class로 손보면 편한 작업이 가능하지 않을까?
-  - 단순 객체 정리의 용도로 사용하는 경우도 있던데, 이것도 잘 활용하고 있는 게 맞는가?
+  - 단순 메소드 정리의 용도로 사용하는 경우도 있던데, 이것도 잘 활용하고 있는 게 맞는가?
 - 객체의 깊이가 깊어져도 되는가?
+  - 래핑이 너무 많이 이루어져도 되는가?
 - "거대한 객체"의 기준은 무엇인가?
   - IMO. SRP를 지키기만 한다면, "거대한 클래스"가 아니다?
   - 메소드가 한 가지 일만 함을 나타냄은, 프로세스를 최대한 잘게 쪼갠 것임을 의미한다?
@@ -71,6 +74,12 @@
     - [[java] 클래스를 숨기는 방법](https://stackoverflow.com/questions/6642909/providing-java-library-but-hiding-some-classes)
     - [[java] public, protected, default, private](https://mainia.tistory.com/5574)
   - default를 써봤는데, default로 감춰진 클래스들이 구별이 안 되어서 유지보수가 더 힘들다고 느꼈다.
+- 인자로 넘겨받는 정보는 최소한의 정보여야 하는가?
+  - IMO. 이리저리 생각해봤는데, 그냥 정보를 통으로 넘겨받고, 그 정보에게 물어보는 게 나을 것 같다.
+- 반환값은 원시값 또는 record 객체로 제한하는 것이 좋은가?
+  - IMO. 이건 꽤 괜찮을 것 같다.
+- 원시값을 감싸는 객체들은 record로 만드는 것이 좋은가?
+  - IMO. 적어도 불변하다면, record를 써도 상관없을 것 같다.
 
 ## 기타 의견
 
