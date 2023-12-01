@@ -23,6 +23,7 @@
 - getter에 대해서
   - [getter는 무조건 지양해야 하는가?](https://tecoble.techcourse.co.kr/post/2020-04-28-ask-instead-of-getter/)
   - getter는 언제 쓰는가?
+    - IMO. 데이터로부터 가공된 정보가 아니라 그 데이터 자체가 필요하다면 getter를 쓰는 게 좋은 것 같다.
   - [getter는 어떻게 쓰는가](https://stackoverflow.com/questions/54506230/ddd-aggregate-should-getters-be-really-avoided)
   - [디미터 원칙](https://dkswnkk.tistory.com/687)
 - [private constructor는 언제 쓰는 것이 좋은가?](https://stackoverflow.com/questions/2062560/what-is-the-use-of-making-constructor-private-in-a-class)
