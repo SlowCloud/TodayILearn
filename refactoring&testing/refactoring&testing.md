@@ -30,6 +30,9 @@
   - [getter는 무조건 지양해야 하는가?](https://tecoble.techcourse.co.kr/post/2020-04-28-ask-instead-of-getter/)
   - getter는 언제 쓰는가?
     - IMO. 데이터로부터 가공된 정보가 아니라 그 데이터 자체가 필요하다면 getter를 쓰는 게 좋은 것 같다.
+    - 사실 남용하지만 않으면 그냥 getter로 다 열어버려도 상관없는 게 아닐까?
+    - 객체에 대한 기능들을 묶어두는 용도로 클래스를 쓰는 거라고 생각하면 정말로 상관없는 것 같다.
+    - 자세한 기능구현을 숨기고 한 곳에 모아두는 용도라고 생각하면 진짜 상관없을 것 같다.
   - [getter는 어떻게 쓰는가](https://stackoverflow.com/questions/54506230/ddd-aggregate-should-getters-be-really-avoided)
   - [디미터 원칙](https://dkswnkk.tistory.com/687)
 - [private constructor는 언제 쓰는 것이 좋은가?](https://stackoverflow.com/questions/2062560/what-is-the-use-of-making-constructor-private-in-a-class)
@@ -81,13 +84,10 @@
     - [[java] 클래스를 숨기는 방법](https://stackoverflow.com/questions/6642909/providing-java-library-but-hiding-some-classes)
     - [[java] public, protected, default, private](https://mainia.tistory.com/5574)
   - default를 써봤는데, default로 감춰진 클래스들이 구별이 안 되어서 유지보수가 더 힘들다고 느꼈다.
-- 인자로 넘겨받는 정보는 최소한의 정보여야 하는가?
-  - IMO. 이리저리 생각해봤는데, 그냥 정보를 통으로 넘겨받고, 그 정보에게 물어보는 게 나을 것 같다.
-- 반환값은 원시값 또는 record 객체로 제한하는 것이 좋은가?
-  - IMO. 이건 꽤 괜찮을 것 같다.
-  - 사실 남용하지만 않으면 그냥 getter로 다 열어버려도 상관없는 게 아닐까?
-- 원시값을 감싸는 객체들은 record로 만드는 것이 좋은가?
-  - IMO. 적어도 불변하다면, record를 써도 상관없을 것 같다.
+- IMO. getter를 쓰면 된다. record는 필요할 때에만 쓰자.
+  - 인자로 넘겨받는 정보는 최소한의 정보여야 하는가?
+  - 반환값은 원시값 또는 record 객체로 제한하는 것이 좋은가?
+  - 원시값을 감싸는 객체들은 record로 만드는 것이 좋은가?
 
 ## 기타 의견
 
