@@ -64,6 +64,8 @@
   - [내부 클래스의 장단점](https://inpa.tistory.com/entry/JAVA-%E2%98%95-%EB%82%B4%EB%B6%80-%ED%81%B4%EB%9E%98%EC%8A%A4Inner-Class-%EC%9E%A5%EC%A0%90-%EC%A2%85%EB%A5%98#1._%ED%81%B4%EB%9E%98%EC%8A%A4%EB%A5%BC_%EB%85%BC%EB%A6%AC%EC%A0%81%EC%9C%BC%EB%A1%9C_%EA%B7%B8%EB%A3%B9%ED%99%94)
   - [nested class와 inner class의 차이](https://tworab.tistory.com/49)
   - inner class는 outer class의 요소들을 직접 참조할 수 있다. 이를 적극적으로 활용할 수 있다면 내부 클래스를 만드는 게 좋다!
+- [객체지향 연관성](https://itwiki.kr/w/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5_%EC%97%B0%EA%B4%80%EC%84%B1)
+  - 분류화, 집단화, 일반화, 특수화
 
 ## 결론을 내리지 못한 것들
 
@@ -104,6 +106,53 @@
   - 데이터 객체, 관계 객체는 DB 테이블 설계와 비슷하게 설계하고, 행위 객체는 어떠한 큰 프로세스 단위에서 사용되는 메소드와 객체들을 모아서 명령하듯 실행하는 객체로 구별하면 될 것 같다.
   - 행위 객체는 내부적으로 사용되는 자잘한 행위 객체들을 가져도 된다. 프로세스 단위에 따라 그 크기가 달라질 것 같다.
   - 객체 설계에 데이터 모델링과 정규화를 활용해보는 것도 좋을 것 같다.
+
+## 예시
+```
+// 아래 코드의 예시는 숫자야구 게임
+
+// 적은 추상화, 잘게 나눠진 메소드
+// game에 inputView, outputView와 같은 외부 객체를 주입할 필요가 없음
+// 각 메소드마다 적은 케이스들로 쉽게 테스트 가능
+while(!game.end()) {
+	String numbers = inputView.getNumbers();
+	StrikeAndBall strikeAndBall = game.check(numbers);
+	outputView.printStrikeAndBall(strikeAndBall);
+}
+outputView.printTryCount(game.getTryCount());
+
+// 지나친 추상화, 많은 일을 하는 메소드
+// inputView, outputView와 같은 객체들을 주입해주어야 함
+// 하나의 메소드에 많은 케이스들에 대한 검증이 필요함. 테스트가 어려워짐
+outputView.printResult(game.process());
+```
+
+```
+// 어떤 것을 사용하는 것이 좋은가?
+
+// 적은 메소드, 유연한 작업 처리
+today.is(Today.Calender.WEEKEND); // (calender) -> calender.apply(localDate)
+today.is(Today.Calender.WEEKDAY);
+today.is(Today.Calender.MONDAY);
+
+// 많은 메소드, 한가지 작업만 처리
+// 내부적으로는 위와 똑같이 구현됨
+today.isWeekend(); // () -> is(Calender.WEEKEND)
+today.isWeekday();
+today.isMonday();
+```
+
+```
+// 어떤 것을 사용하는 것이 좋은가? 22
+
+// 많은 객체들, 다형성/추상화
+backendCrews = backendCrewReader.read();
+frontendCrews = frontendCrewReader.read();
+
+// 적은 객체, 메소드로 처리
+backendCrews = crewReader.readBackend();
+frontendCrews = crewReader.readFrontend();
+```
 
 # 테스팅
 
