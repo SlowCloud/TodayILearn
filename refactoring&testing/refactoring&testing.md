@@ -156,12 +156,29 @@ frontendCrews = crewReader.readFrontend();
 ```
 
 ```
+// 어떤 것을 사용하는 것이 좋은가? 333
+// 함수지향이라면 고민하지 않아도 될 문제였을 것 같다.
+
 // 자료구조로 처리
 Map<Book, Price> priceOfBooks;
 
 // 관계 객체로 처리
 record PriceOfBook(Book book, Price price) {}
 List<PriceOfBook> priceofBooks;
+```
+
+```
+// 어떤 것을 사용하는 것이 좋은가? 4444
+
+// 값을 꺼내서 주기
+// 의존성 없음
+// 값에 대한 검증이 되지 않음
+outputView.printName(name.getName());
+
+// 일단 넘겨받고 내부에서 값을 꺼내 쓰기
+// 의존성이 생김
+// 검증된 값을 넘겨받음
+outputView.printName(name); // System.out.println(name.getName());
 ```
 
 # 테스팅
