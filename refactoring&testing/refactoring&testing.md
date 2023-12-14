@@ -145,6 +145,7 @@ today.isMonday();
 
 ```
 // 어떤 것을 사용하는 것이 좋은가? 22
+// 함수지향이라면 고민하지 않아도 될 문제였을 것 같다.
 
 // 많은 객체들, 다형성/추상화
 backendCrews = backendCrewReader.read();
@@ -157,7 +158,6 @@ frontendCrews = crewReader.readFrontend();
 
 ```
 // 어떤 것을 사용하는 것이 좋은가? 333
-// 함수지향이라면 고민하지 않아도 될 문제였을 것 같다.
 
 // 자료구조로 처리
 Map<Book, Price> priceOfBooks;
