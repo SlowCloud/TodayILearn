@@ -129,6 +129,35 @@ outputView.printResult(game.process());
 ```
 
 ```
+// game 내에서 게임 재시작 횟수 세기, game이 게임이 끝났는지의 여부를 확인하고 기록함
+// 아래 코드에서는 game이 게임이 끝났는지, 횟수는 얼마나 되는지를 모두 관리하고 있음
+// 프로세스를 한 주제를 중심으로 객체로 추상화하였음.
+// 객체 내 데이터를 중심으로 보면 따로 노는 데이터가 존재함.
+while(!game.end()) {
+	String numbers = inputView.getNumbers();
+	StrikeAndBall strikeAndBall = game.check(numbers);
+	outputView.printStrikeAndBall(strikeAndBall);
+  game.count();
+}
+outputView.printTryCount(game.getTryCount());
+
+// game은 답을 비교하는 일만 진행함.
+// 단일 책임 원칙을 지킴. 게임은 게임에만 집중하고 있고, 게임이 끝났는지, 횟수는 얼마나 되었는지는 외부에서 따로 결정함
+// 이 경우에는 game보다는 answer 정도로 이름을 바꿔주는 게 좋을 것 같음.
+int cnt = 1;
+while(true) {
+	String numbers = inputView.getNumbers();
+	StrikeAndBall strikeAndBall = game.check(numbers);
+	outputView.printStrikeAndBall(strikeAndBall);
+  if(strikeAndBall.isThreeStrike()) break;
+  cnt++;
+}
+outputView.printTryCount(cnt);
+
+// 탑다운 설계를 하면 1번처럼 설계해버리는 경우가 많은 것 같다.
+```
+
+```
 // 어떤 것을 사용하는 것이 좋은가?
 
 // 적은 메소드, 유연한 작업 처리
