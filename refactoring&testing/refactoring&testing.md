@@ -129,10 +129,12 @@ outputView.printResult(game.process());
 ```
 
 ```
-// game 내에서 게임 재시작 횟수 세기, game이 게임이 끝났는지의 여부를 확인하고 기록함
-// 아래 코드에서는 game이 게임이 끝났는지, 횟수는 얼마나 되는지를 모두 관리하고 있음
-// 프로세스를 한 주제를 중심으로 객체로 추상화하였음.
-// 객체 내 데이터를 중심으로 보면 따로 노는 데이터가 존재함.
+// 프로세스를 한 주제를 중심으로 객체로 추상화하였음. game이 여러 데이터 객체를 활용하는 행위 객체가 됨
+// 메소드를 너무 잘게 쪼개면 임시로 값을 저장할 내부 필드가 너무 많아지나..? 그러면 필드를 쓰지 말고 반환하게 해야지
+// 그럼 아래에서는 isGameEnd를 그냥 외부로 옮기는 게 맞을까? 아니면 그냥 메소드 위치가 안 맞는 걸지도
+// game이 아니라 strikeAndBall에 물어봐야지
+// 이러면 또 분기 문제인가?
+// class Game { Answer answer, int tryCount, boolean isGameEnd }
 while(!game.end()) {
 	String numbers = inputView.getNumbers();
 	StrikeAndBall strikeAndBall = game.check(numbers);
@@ -140,21 +142,40 @@ while(!game.end()) {
   game.count();
 }
 outputView.printTryCount(game.getTryCount());
-
-// game은 답을 비교하는 일만 진행함.
-// 단일 책임 원칙을 지킴. 게임은 게임에만 집중하고 있고, 게임이 끝났는지, 횟수는 얼마나 되었는지는 외부에서 따로 결정함
-// 이 경우에는 game보다는 answer 정도로 이름을 바꿔주는 게 좋을 것 같음.
-int cnt = 1;
+/*
 while(true) {
 	String numbers = inputView.getNumbers();
 	StrikeAndBall strikeAndBall = game.check(numbers);
 	outputView.printStrikeAndBall(strikeAndBall);
   if(strikeAndBall.isThreeStrike()) break;
+  game.count();
+}
+outputView.printTryCount(game.getTryCount());
+*/
+/*
+while(true) {
+	String numbers = inputView.getNumbers();
+	StrikeAndBall strikeAndBall = game.check(numbers);
+	outputView.printStrikeAndBall(strikeAndBall);
+  if(game.end(strikeAndBall)) break;
+  game.count();
+}
+outputView.printTryCount(game.getTryCount());
+*/
+// 일단 요구사항이나 보고 고민을 해보자고 이런 건
+// 일단 게임이 끝났는지를 묻는 건 strikeAndBall에 묻는 게 맞고, 횟수를 세는 건 어떻게 할지 고민해보자
+// 일단 각 필드끼리 상호작용하지 않았으니 분리하는 게 맞는 듯?
+
+// game의 내부 필드를 분리하여 구현한 모습. 게임에 관한 로직이 구체적으로 드러나 있다.
+int cnt = 1;
+while(true) {
+	String numbers = inputView.getNumbers();
+	StrikeAndBall strikeAndBall = answer.check(numbers);
+	outputView.printStrikeAndBall(strikeAndBall);
+  if(strikeAndBall.isThreeStrike()) break;
   cnt++;
 }
 outputView.printTryCount(cnt);
-
-// 탑다운 설계를 하면 1번처럼 설계해버리는 경우가 많은 것 같다.
 ```
 
 ```
