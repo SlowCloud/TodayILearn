@@ -66,6 +66,9 @@
   - inner class는 outer class의 요소들을 직접 참조할 수 있다. 이를 적극적으로 활용할 수 있다면 내부 클래스를 만드는 게 좋다!
 - [객체지향 연관성](https://itwiki.kr/w/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5_%EC%97%B0%EA%B4%80%EC%84%B1)
   - 분류화, 집단화, 일반화, 특수화
+- TDD, 바텀업이냐 탑다운이냐
+  - [한 해외 개발자의 탑다운 TDD 시도 경험](https://medium.com/@ambye/top-down-vtdd-1f3aebf9b22)
+    - 분리했던 책임이, 더 낮은 단계에서 다시 결합하는 경험을 했다고 함.
 
 ## 결론을 내리지 못한 것들
 
