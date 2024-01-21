@@ -13,8 +13,9 @@ vim script로 플러그인을 작성할 수 있으며, Vim의 runtimepath 내부
 
 [Vim 버전 8부터 빌트인 패키지 관리자가 생겼다.]((https://dgkim5360.tistory.com/entry/vim-8-native-package-support))
 
-깃허브 Star는 Vundle이 가장 많습니다.  
-Vundle 또는 Vim 네이티브를 추천드립니다.
+~~깃허브 Star는 Vundle이 가장 많습니다.~~  
+vundle보다 vim-plug가 더 많습니다.  
+vim-plug 또는 Vim 네이티브를 추천드립니다.
 
 #### [Native Package Management](https://vimhelp.org/repeat.txt.html#packages)
 ~/.vim/pack/{grp}/start/ 디렉터리에 패키지를 설치(git clone)하시면 됩니다.  
