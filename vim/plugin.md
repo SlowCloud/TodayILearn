@@ -1,6 +1,8 @@
 
 # 플러그인
 
+> 내용 정리중
+
 VSCode에서도 플러그인 쓰고 있잖아요? Vim에서도 깔아보자구요!
 
 ### 작동방식
@@ -8,6 +10,9 @@ VSCode에서도 플러그인 쓰고 있잖아요? Vim에서도 깔아보자구�
 vim script로 플러그인을 작성할 수 있으며, Vim의 runtimepath 내부에 넣어두면 플러그인을 사용할 수 있다.  
 
 플러그인 관리자는 이 runtimepath를 조작하여 플러그인의 활용 여부를 관리할 수 있게 해준다.
+
+[vim-bootstrap.com](https://vim-bootstrap.com/)  
+기본적인 빔 플러그인과 환경 세팅이 이루어진 .vimrc 또는 init.vim을 만들어준다. 전자는 vim, 후자는 neovim의 파일이다.
 
 ### 플러그인 관리자
 
